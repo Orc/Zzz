@@ -14,7 +14,7 @@ fail(char *why)
     if ( errno )
 	perror(why);
     else
-	fprintf(stderr, "%s\n", why);
+	fprintf(stderr, "%s.\n", why);
     exit(1);
 }
 
@@ -25,19 +25,14 @@ char **argv;
     mach_port_t kernel;
     io_connect_t controller;
 
-    if ( getuid() != 0 ) {
-	fprintf(stderr, "Mere mortals may not use %s.\n", basename(argv[0]));
-	exit(1);
-    }
-    
     if ( IOMasterPort(bootstrap_port, &kernel) != kIOReturnSuccess )
-	fail("Can't get master port");
+	fail("Can't find the kernel port");
     
     if ( (controller=IOPMFindPowerManagement(kernel)) == 0 )
-	fail("Can't get power management port");
+	fail("Can't find the power management port");
     
     if ( IOPMSleepSystem(controller) != kIOReturnSuccess )
-	fail("IOPMSleepSystem() failed");
+	fail("The sleep request failed");
 
     IOServiceClose(controller);
     return 0;

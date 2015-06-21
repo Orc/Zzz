@@ -1,5 +1,6 @@
-BINDIR=/usr/bin
-MAN8DIR=/usr/share/man/man8
+PREFIX=/usr
+BINDIR=$(DESTDIR)$(PREFIX)/bin
+MAN8DIR=$(DESTDIR)$(PREFIX)/share/man/man8
 INSTALL=install
 
 Zzz:  Zzz.c

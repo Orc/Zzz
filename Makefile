@@ -6,5 +6,6 @@ Zzz:  Zzz.c
 	cc -o Zzz Zzz.c -framework IOKit
 
 install: Zzz
+	$(INSTALL) -d $(BINDIR) $(MAN8DIR)
 	$(INSTALL) -c -m 511 Zzz $(BINDIR)
 	$(INSTALL) -c -m 644 Zzz.8 $(MAN8DIR)

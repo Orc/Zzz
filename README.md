@@ -6,9 +6,8 @@
 Traditional unix-style installation:
 
 >   1. `make Zzz`
->   2. if it doesn't exist, `mkdir ~/bin`
->   3. `cp Zzz ~/bin`
->   4. Is `~/bin` in your `$PATH`?  If not, you can define it in your `~/.profile`
+>   3. `sudo make install`
+>   4. Is `/usr/local/bin` in your `$PATH`?  If not, you can define it in your `~/.profile`
 
 Alternatively, you can use [Brew](https://brew.sh) to do the installation:
 

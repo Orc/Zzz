@@ -6,14 +6,14 @@
 Traditional unix-style installation:
 
 >   1. `make Zzz`
-   2. if it doesn't exist, `mkdir ~/bin`
-   3. `cp Zzz ~/bin`
-   4. Is `~/bin` in your `$PATH`?  If not, you can define it in your `~/.profile`
+>   2. if it doesn't exist, `mkdir ~/bin`
+>   3. `cp Zzz ~/bin`
+>   4. Is `~/bin` in your `$PATH`?  If not, you can define it in your `~/.profile`
 
 Alternatively, you can use [Brew](https://brew.sh) to do the installation:
 
 >   1. If needed, install brew on your mac.
-   2. `brew install Zzz`
+>   2. `brew install Zzz`
 
 ## Running
 

@@ -1,12 +1,20 @@
 # Zzz
 > A command-line MacOS sleep program (like SleepNow)
 
-## **Fancy the terminal, then no need to close the lid!**
+## Installation
 
-### Installation
-1. If not already, install brew on your mac.
-    [Brew](https://brew.sh)
-2. Execute the following command in terminal to install zzz onto your mac
-    `brew install zzz`
-3. Run zzz to put your mac to sleep instantly
-3. Enjoy terminal sleepyness!!
+Traditional unix-style installation:
+
+>   1. `make Zzz`
+   2. if it doesn't exist, `mkdir ~/bin`
+   3. `cp Zzz ~/bin`
+   4. Is `~/bin` in your `$PATH`?  If not, you can define it in your `~/.profile`
+
+Alternatively, you can use [Brew](https://brew.sh) to do the installation:
+
+>   1. If needed, install brew on your mac.
+   2. `brew install Zzz`
+
+## Running
+
+Want to put your mac to sleep?  Type 'Zzz' and it will immediately sleep (and, of course, it can be awakened in the usual way.)

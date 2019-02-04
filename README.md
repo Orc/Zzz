@@ -9,7 +9,7 @@ Traditional unix-style installation:
 >   3. `sudo make install`
 >   4. Is `/usr/local/bin` in your `$PATH`?  If not, you can define it in your `~/.profile`
 
-Alternatively, you can use [Brew](https://brew.sh) to do the installation:
+Alternatively, you can use [Homebrew](https://brew.sh) to do the installation:
 
 >   1. If needed, install brew on your mac.
 >   2. `brew install Zzz`

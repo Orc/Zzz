@@ -18,19 +18,17 @@ fail(char *why)
     exit(1);
 }
 
-int
-main(argc, argv)
-char **argv;
+int main(int argc, char **argv)
 {
     mach_port_t kernel;
     io_connect_t controller;
 
     if ( IOMasterPort(bootstrap_port, &kernel) != kIOReturnSuccess )
 	fail("Can't find the kernel port");
-    
+
     if ( (controller=IOPMFindPowerManagement(kernel)) == 0 )
 	fail("Can't find the power management port");
-    
+
     if ( IOPMSleepSystem(controller) != kIOReturnSuccess )
 	fail("The sleep request failed");
 

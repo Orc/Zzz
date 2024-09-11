@@ -20,6 +20,7 @@ fail(char *why)
 
 int
 main(argc, argv)
+int argc;
 char **argv;
 {
     mach_port_t kernel;
